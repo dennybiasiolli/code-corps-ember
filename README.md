@@ -54,14 +54,10 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 We use [ember-exam](https://github.com/trentmwillis/ember-exam) for running tests since it allows for parallel testing, randomized orders, and other neat configurations. You can check out the repository readme there to see the available options. A few handy ones to use when running tests locally are outlined below.
 
-* `ember exam` will run the tests in order
-* `ember exam --split=3 --weighted --parallel` will run tests in 3 PhantomJS instances in parallel with an equal split. This will be a little faster but unstable on systems with low RAM.
+* `ember exam` will run the tests
+* `ember exam --split=3 --weighted --parallel` will run tests in 3 PhantomJS instances in parallel with an equal split
 * `ember exam --random` will run the tests in a random order
-* `ember exam --filter='acceptance' will only run acceptance tests. Other options here include Unit and Integration. You can also exclude
-
-If you run into issues with the tests not finishing (PhantomJS is sometimes unstable on Windows) you may want to run the tests in a different browser. To do so, you will need to edit the `testem.json` file and replace 'PhantomJS' with another browser. You can use `testem launchers` to see what browsers are available for use. If testem isn't available as a command, run `npm install -g testem` to install testem on your system.
-
-Make sure you don't commit changes to `testem.json`
+* `ember exam --filter='acceptance'` will only run acceptance tests. The same sytax can be used for other types of tests, such as `ember exam --filter='unit'` and `ember exam --filter='integration'`
 
 ### Building
 

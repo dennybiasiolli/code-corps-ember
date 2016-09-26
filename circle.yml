@@ -12,6 +12,9 @@ dependencies:
     - npm install
     - bower install
     - npm rebuild node-sass
+test:
+  override:
+    - ember exam --split=3 --weighted --parallel
 deployment:
   production:
     branch: master
